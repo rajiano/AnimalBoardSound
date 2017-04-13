@@ -1,26 +1,134 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AnimalSoundBoards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="AW6-BI-f01">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Mul-d9-BxT">
+                                <rect key="frame" x="30" y="30" width="354" height="653"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="RdE-f7-9BL">
+                                        <rect key="frame" x="0.0" y="0.0" width="354" height="204.33333333333334"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mo2-PU-taW">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="204.33333333333334"/>
+                                                <state key="normal" title="Button" image="Cat"/>
+                                                <connections>
+                                                    <action selector="catButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y5W-Jl-W12"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nQn-qc-a4n">
+                                                <rect key="frame" x="197" y="0.0" width="157" height="204.33333333333334"/>
+                                                <state key="normal" title="Button" image="Dog"/>
+                                                <connections>
+                                                    <action selector="dogButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l0V-L0-770"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="uAl-Ls-4Jw">
+                                        <rect key="frame" x="0.0" y="224.33333333333331" width="354" height="204.33333333333331"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f1u-Pw-csq">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="204.33333333333334"/>
+                                                <state key="normal" title="Button" image="Frog"/>
+                                                <connections>
+                                                    <action selector="frogButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="eWH-zY-vgh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Goy-Qe-y8o">
+                                                <rect key="frame" x="197" y="0.0" width="157" height="204.33333333333334"/>
+                                                <state key="normal" title="Button" image="Horse"/>
+                                                <connections>
+                                                    <action selector="horseButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yWE-9a-WUs"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="u1u-uz-GpH">
+                                        <rect key="frame" x="0.0" y="448.66666666666674" width="354" height="204.33333333333326"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aXH-nb-aSh">
+                                                <rect key="frame" x="0.0" y="0.0" width="157" height="204.33333333333331"/>
+                                                <state key="normal" title="Button" image="Sheep"/>
+                                                <connections>
+                                                    <action selector="sheepButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gn0-XX-vcq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bzx-nx-VbH">
+                                                <rect key="frame" x="197" y="0.0" width="157" height="204.33333333333331"/>
+                                                <state key="normal" title="Button" image="Pig"/>
+                                                <connections>
+                                                    <action selector="pigButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="60V-K8-iJX"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="k35-9s-Pon">
+                                <rect key="frame" x="18" y="698" width="378" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="5H4-Ul-WMX"/>
+                                </constraints>
+                                <color key="minimumTrackTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <action selector="volume:" destination="BYZ-38-t0r" eventType="valueChanged" id="F9a-FQ-Wz4"/>
+                                </connections>
+                            </slider>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="AW6-BI-f01" secondAttribute="bottom" id="309-E3-UQQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="k35-9s-Pon" secondAttribute="bottom" constant="8" id="5Om-Ze-kQg"/>
+                            <constraint firstItem="AW6-BI-f01" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="8b0-Bi-mHg"/>
+                            <constraint firstItem="k35-9s-Pon" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="9Wa-n4-7E8"/>
+                            <constraint firstItem="Mul-d9-BxT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ETa-f3-ISJ"/>
+                            <constraint firstItem="Mul-d9-BxT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="30" id="HYQ-h8-IaA"/>
+                            <constraint firstAttribute="trailing" secondItem="AW6-BI-f01" secondAttribute="trailing" id="Z15-Ci-McK"/>
+                            <constraint firstItem="k35-9s-Pon" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="cMP-xb-k1K"/>
+                            <constraint firstAttribute="trailing" secondItem="Mul-d9-BxT" secondAttribute="trailing" constant="30" id="dxX-Al-U9J"/>
+                            <constraint firstItem="AW6-BI-f01" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="im4-bE-QYF"/>
+                            <constraint firstItem="k35-9s-Pon" firstAttribute="top" secondItem="Mul-d9-BxT" secondAttribute="bottom" constant="15" id="kpM-hd-bje"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="volumeSlide" destination="k35-9s-Pon" id="JvP-bt-o50"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-98.550724637681171" y="123.09782608695653"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Background" width="1920" height="1080"/>
+        <image name="Cat" width="507" height="800"/>
+        <image name="Dog" width="555" height="744"/>
+        <image name="Frog" width="794" height="900"/>
+        <image name="Horse" width="510" height="594"/>
+        <image name="Pig" width="667" height="745"/>
+        <image name="Sheep" width="576" height="600"/>
+    </resources>
 </document>
