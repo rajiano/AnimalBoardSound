@@ -49,6 +49,12 @@ class ViewController: UIViewController {
 
     
     @IBAction func volume(_ sender: Any) {
+        soundEffect1.volume = volumeSlide.value
+        soundEffect2.volume = volumeSlide.value
+        soundEffect3.volume = volumeSlide.value
+        soundEffect4.volume = volumeSlide.value
+        soundEffect5.volume = volumeSlide.value
+        soundEffect6.volume = volumeSlide.value
     }
 
     @IBAction func catButton(_ sender: Any) {
